@@ -232,6 +232,102 @@ return false;
 
 ///////////////////////////
 
+public static int count(BinNode<Integer> t, int n) {
+
+if (t==null)
+return 0;
+
+if (t.getValue()==n)
+return (1+count(t.getLeft(),n)+count(t.getRight(),n);
+
+return count(t.getLeft(),n)+count(t.getRight(),n);
+
+
+
+////////////////////////
+
+public static int max(BinNode<Integer> t) {
+
+if (t==null)
+return 0;
+
+return Math.max(t.getValue(),Math.max(max(t.getLeft()),max(t.getRight())));
+
+
+
+
+
+///////////////////////////
+
+public static int min(BinNode<Integer> t) {
+
+if (t==null)
+return 100000;
+
+return Math.min(t.getValue(),Math.min(min(t.getLeft()),min(t.getRight())));
+
+
+///////////////////////
+
+
+public static int ex23(BinNode<Integer> t) {
+
+return max(t)-min(t);
+
+
+
+///////////////////////
+
+public static int ex27(BinNode<Integer> t) {
+if (!t.hasLeft()&& !t.hasRight()
+return 1;
+
+if (!t.hasLeft)
+return ex27(t.getRight())+1;
+
+if (!t.hasRight)
+return ex27(t.getLeft())+1;
+
+
+return Math.max(ex27(t.getLeft())+1,ex27(g.getRight())+1);
+
+
+ 
+ 
+///////////////////////
+public static boolean ex26(BinNode<Integer> t) {
+    
+return ex14(t)==Math.pow(2,ex27(t))   
+
+
+///////////////////
+public static boolean ex22(BinNode<Integer> t) {
+if (!t.hasLeft()&& !t.hasRight()
+return true;
+
+if (!t.hasLeft())
+return false;
+
+if (!t.hasRight())
+return false;
+
+return ex22(t.getLeft())&&ex22(g.getRight());
+
+
+////////////////////////
+public static boolean ex21(BinNode<Integer> t) {
+
+if (t==null)
+return true;
+
+if Math.abs(ex27(t.getLeft())-ex27(t.getRight()))<1
+return true;
+
+return ex21(t.getLeft())&&ex21(t.getRight())
+
+
+/////////////////////////////
+
 
 
 
